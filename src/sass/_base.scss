@@ -1,4 +1,9 @@
 :root {
+  --color-white: #fff;
+  --color-dark-gray: #272727;
+  --color-medium-gray: #413d3d;
+  --color-light-gray: #7c7c7c;
+
   --color-dark-slate-blue: #1e3656;
   --color-light-sage: #f1faef;
   --color-faded-red: #e43c4b;
@@ -6,3 +11,22 @@
   --color-dull-blue: #487b9b;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10 / 16 = .625, for rems
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
