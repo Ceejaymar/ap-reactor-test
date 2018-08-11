@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import Routes from './routes';
 import './css/style.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state ={
+      isAuthenticated: false
+    };
+  }
   render() {
+    const childProps = {
+      isAuthenticated: this.state.isAuthenticated,
+    };
+
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>this is the app component</div>
+
+        <Routes childProps={childProps} />
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
