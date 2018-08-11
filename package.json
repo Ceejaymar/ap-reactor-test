@@ -15,10 +15,9 @@
     "eject": "react-scripts eject",
     "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
     "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
-    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.css",
     "start": "npm-run-all --parallel start-js watch:sass",
-    "build": "npm-run-all compile:sass prefix:css compress:css build-js"
+    "build": "npm-run-all compile:sass prefix:css build-js"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.0",
