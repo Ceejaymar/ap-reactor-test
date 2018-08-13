@@ -13,3 +13,27 @@
   padding: 5rem;
   border-bottom: .1rem solid var(--color-light-gray);
 }
+
+.examples-section {
+  height: 50vh;
+  // background-color: var(--color-light-sage);
+}
+
+.travel-section {
+  height: 45vh;
+  border-bottom: .1rem solid var(--color-light-gray);
+}
+
+.subscribe-section {
+  height: 30vh;
+}
+
+.auth-section {
+  height: 100vh;
+  background-image: url(../img/onboarding-bg.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}

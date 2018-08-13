@@ -38,12 +38,18 @@ class Subscribe extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input name="email" type="email" ref={this.emailRef} onChange={this.handleChange.bind(this)} placeholder="Your Email" />
-          <button type="submit" disabled={!this.validateForm()} >Subscribe</button>
-        </form>
-      </div>
+      <section className="subscribe-section">
+        <div className="subscribe">
+          <h2 className="subscribe__header">Subscribe to newsletter</h2>
+          <form className="subscribe__form" onSubmit={this.handleSubmit}>
+            <input className="subscribe__input" type="email" ref={this.emailRef} onChange={this.handleChange.bind(this)} placeholder="Your Email" />
+            <button className="subscribe__button" type="submit" disabled={!this.validateForm()} >Subscribe</button>
+          </form>
+        </div>
+        <footer className="footer">
+          <p className="footer__paragraph">Thank you for visiting Reactor!</p>
+        </footer>
+      </section>
     )
   }
 }

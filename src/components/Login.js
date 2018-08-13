@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { stringify } from 'qs';
 
 class Login extends Component {
   constructor(props) {
     super(props)
-    console.log(props);
+    
     this.state = { 
       email: '',
       password: ''
@@ -48,13 +49,24 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="email" onChange={this.handleChange.bind(this, 'email')} placeholder="Email" />
-          <input type="password" onChange={this.handleChange.bind(this, 'password')} placeholder="Password" />
-          <button type="submit" disabled={!this.validateForm()}>Login</button>
-        </form>
-      </div>
+      <section className="auth-section">
+        <div className="navigation">
+          <p className="navigation__brand">Reactor</p>
+        </div>
+        <div className="auth-container">
+          <div className="auth">
+            <div className="auth__options"> 
+              <NavLink className="auth__link" to="/signup">Sign Up</NavLink>
+              <NavLink className="auth__link auth__active" to="/login">Login</NavLink>
+            </div>
+            <form className="auth__form" onSubmit={this.handleSubmit}>
+              <input className="auth__input" type="email" onChange={this.handleChange.bind(this, 'email')} placeholder="Email" />
+              <input className="auth__input" type="password" onChange={this.handleChange.bind(this, 'password')} placeholder="Password" />
+              <button className="auth__button" type="submit" disabled={!this.validateForm()}>Login</button>
+            </form>
+          </div>
+        </div>
+      </section>
     )
   }
 }
