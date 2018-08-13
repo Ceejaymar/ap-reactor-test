@@ -1,0 +1,15 @@
+.header-section {
+  height: 80vh;
+  background-image: url('../img/banner.png');
+  background-size: cover;
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     var(--color-light-gray), 
+  //     (var(--color-light-gray), 
+  //     url('../img/banner.png');
+}
+
+.about-section {
+  padding: 5rem;
+  border-bottom: .1rem solid var(--color-light-gray);
+}
