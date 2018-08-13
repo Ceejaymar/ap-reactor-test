@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import Routes from './routes';
+import React, { Component, Fragment } from 'react';
+import { Route, Switch, withRouter } from 'react-router-dom';
+import Landing from './components/Landing';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import NotFound from './components/NotFound';
 import './css/style.css';
 
+
 class App extends Component {
-  constructor(props){
-    super(props)
-
-    this.state ={
-      isAuthenticated: false
-    };
-  }
   render() {
-    const childProps = {
-      isAuthenticated: this.state.isAuthenticated,
-    };
-
     return (
-      <div className="App">
-        <div>this is the app component</div>
-
-        <Routes childProps={childProps} />
-      </div>
+      <Fragment>
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={SignUp} />
+          <Route component={NotFound} />
+        </Switch>
+      </Fragment>
     );
   }
 }
