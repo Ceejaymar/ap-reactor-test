@@ -1,11 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+// import AppliedRoute from './components/AppliedRoute';
 import Landing from './components/Landing';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 import NotFound from './components/NotFound';
-import AppliedRoute from './components/AppliedRoute';
 
-export default ({ childProps }) => 
+export default () => 
   <Switch>
-    <AppliedRoute exact path='/' component={Landing} props={childProps} />
+    <Route exact path='/' component={Landing} />
+    <Route exact path='/login' component={Login} />
+    <Route exact path='/signup' component={SignUp} />
     <Route component={NotFound} />
   </Switch>
