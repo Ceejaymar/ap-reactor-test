@@ -4,12 +4,17 @@ import About from './About';
 import Examples from './Examples';
 import Travel from './Travel';
 import Subscribe from './Subscribe';
-import Footer from './Footer';
 
 class Landing extends Component {
   render() {
     return (
-        <div>this is the landing page</div>
+      <Fragment>
+        <Header />
+        <About />
+        <Examples />
+        <Travel />
+        <Subscribe />
+      </Fragment>
     );
   }
 }
