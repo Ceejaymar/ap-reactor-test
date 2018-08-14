@@ -1,0 +1,30 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 500;
+
+  &__brand {
+    padding: 1rem 0 1rem 10rem;
+    font-size: 2rem;
+  }
+  
+  &__link:link,
+  &__link:visited {
+    color: var(--color-white);
+    padding-right: 10rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  font-size: 5rem;
+  color: var(--color-white);
+
+}

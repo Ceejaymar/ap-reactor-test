@@ -11,6 +11,11 @@
   --color-dull-blue: #487b9b;
 }
 
+$screen-large: 68.75em;       // 1100px
+$screen-medium: 56.25em;      // 900px
+$screen-small: 37.5em;        // 600px
+$screen-smallest: 31.25em;    // 500px
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +30,14 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10 / 16 = .625, for rems
+
+  @media only screen and (max-width: $screen-small) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $screen-smallest) {
+    font-size: 40%;
+  }
 }
 
 body {

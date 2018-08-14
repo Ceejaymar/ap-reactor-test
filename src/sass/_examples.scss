@@ -1,0 +1,48 @@
+.examples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @media only screen and (max-width: $screen-medium) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  &__items {
+    display: flex;
+  }
+  
+  
+  &__image {
+    height: 18rem;
+    margin-right: 4rem;
+    box-shadow: .5rem 1.5rem 4rem rgba(0, 0, 0, .3);
+  }
+
+  &__info {
+    width: 28rem;
+
+    @media only screen and (max-width: $screen-large) {
+      width: 20rem;
+    }
+
+    @media only screen and (max-width: $screen-medium) {
+      width: 30rem;
+    }
+  }
+  
+  &__title {
+    font-size: 2rem;
+    letter-spacing: .2px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: var(--color-darkest-gray);
+  }
+
+  &__paragraph {
+    color: var(--color-dark-slate-blue);
+    font-size: 1.6rem;
+    letter-spacing: .2px;
+  }
+}
